@@ -1,23 +1,23 @@
 module BtComponents
-    class ButtonComponent < ViewComponent::Base
-      VARIANTS = {
-        primary: "bg-blue-600 hover:bg-blue-700 text-white",
-        secondary: "bg-gray-600 hover:bg-gray-700 text-white",
-        danger: "bg-red-600 hover:bg-red-700 text-white"
-      }
-  
-      def initialize(variant: :primary, **options)
-        @variant = variant
-        @options = options
-      end
-  
-      private
-  
-      def classes
-        [
-          "font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none",
-          VARIANTS[@variant]
-        ].join(" ")
+  class ButtonComponent < ViewComponent::Base
+    def initialize(label:, type: :button, theme: :primary)
+      @label = label
+      @type = type
+      @theme_classes = theme_classes(theme)
+    end
+
+    private
+
+    def theme_classes(theme)
+      case theme.to_sym
+      when :primary
+        "bg-blue-600 hover:bg-blue-700 text-white"
+      when :secondary
+        "bg-gray-600 hover:bg-gray-700 text-white"
+      else
+        "bg-gray-200 hover:bg-gray-300 text-black"
       end
     end
   end
+end
+
