@@ -7,8 +7,9 @@
 
   <%= yield :head %>
 
-  <%= stylesheet_link_tag    "bt_components/application", media: "all", "data-turbo-track": "reload" %>
-  
+  <%= stylesheet_link_tag "bt_components/application", media: "all" %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "bt_components", "data-turbo-track": "reload" %>
 </head>
 <body>
 
