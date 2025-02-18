@@ -17,9 +17,15 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app %>
-    <%= stylesheet_link_tag "bt_components", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "bt_components/application", media: "all" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    
+
+    
   </head>
 
   <body>

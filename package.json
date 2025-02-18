@@ -2,16 +2,14 @@
     "name": "bt_components",
     "version": "1.0.0",
     "dependencies": {
-      "tailwindcss": "^3.4.17", 
-      "@tailwindcss/aspect-ratio": "^0.4.2",
-      "@tailwindcss/container-queries": "^0.1.1",
-      "@tailwindcss/forms": "^0.5.10",
-      "@tailwindcss/typography": "^0.5.16"
-      
+        "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/container-queries": "^0.1.1",
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/typography": "^0.5.16",
+        "tailwindcss": "^4.0.6"
     },
-
     "scripts": {
-      "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
-      "watch:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch"
+        "build:css": "npx tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
+        "watch:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch"
     }
-  }
+}
