@@ -13,7 +13,7 @@ gem "propshaft"
 gem "rubocop-rails-omakase", require: false
 
 gem "foreman"
-gem "tailwindcss-rails", "~> 4.0"
+gem "tailwindcss-rails", "~> 4.2"
 
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem "debug", ">= 1.0.0"
